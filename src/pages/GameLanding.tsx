@@ -1,10 +1,21 @@
 import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
 import Icon from '@/components/ui/icon';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 
 const GameLanding = () => {
   const [showTrailer, setShowTrailer] = useState(false);
+  const [onlinePlayers, setOnlinePlayers] = useState(1247);
+  
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setOnlinePlayers(prev => {
+        const change = Math.floor(Math.random() * 10) - 5;
+        return Math.max(1200, Math.min(1300, prev + change));
+      });
+    }, 3000);
+    return () => clearInterval(interval);
+  }, []);
   
   const features = [
     { icon: 'Gamepad2', title: 'Динамичный геймплей', description: 'Погрузитесь в захватывающее действие' },
@@ -25,9 +36,13 @@ const GameLanding = () => {
         <div className="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNjAiIGhlaWdodD0iNjAiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGRlZnM+PHBhdHRlcm4gaWQ9ImdyaWQiIHdpZHRoPSI2MCIgaGVpZ2h0PSI2MCIgcGF0dGVyblVuaXRzPSJ1c2VyU3BhY2VPblVzZSI+PHBhdGggZD0iTSAxMCAwIEwgMCAwIDAgMTAiIGZpbGw9Im5vbmUiIHN0cm9rZT0iIzliODdmNSIgc3Ryb2tlLXdpZHRoPSIwLjUiIG9wYWNpdHk9IjAuMSIvPjwvcGF0dGVybj48L2RlZnM+PHJlY3Qgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgZmlsbD0idXJsKCNncmlkKSIvPjwvc3ZnPg==')] opacity-20" />
         
         <div className="relative z-10 text-center max-w-5xl mx-auto animate-fade-in">
-          <div className="mb-6 inline-block">
+          <div className="mb-6 flex flex-col sm:flex-row gap-3 justify-center items-center">
             <span className="px-4 py-2 bg-primary/20 border border-primary/30 rounded-full text-primary text-sm font-medium backdrop-blur-sm">
               🎮 Новая игра
+            </span>
+            <span className="px-4 py-2 bg-green-500/20 border border-green-500/30 rounded-full text-green-400 text-sm font-medium backdrop-blur-sm flex items-center gap-2">
+              <span className="w-2 h-2 bg-green-400 rounded-full animate-pulse"></span>
+              Онлайн: {onlinePlayers.toLocaleString()} игроков
             </span>
           </div>
           <h1 className="text-6xl md:text-8xl font-bold mb-6 bg-gradient-to-r from-white via-primary-light to-primary bg-clip-text text-transparent">
