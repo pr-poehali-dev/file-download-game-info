@@ -172,6 +172,92 @@ const GameLanding = () => {
         </div>
       </section>
 
+      {/* Reviews Section */}
+      <section className="py-20 px-4 bg-dark/30">
+        <div className="max-w-6xl mx-auto">
+          <h2 className="text-4xl md:text-5xl font-bold text-center mb-16">Отзывы игроков</h2>
+          <div className="grid md:grid-cols-3 gap-6">
+            <Card className="bg-dark/50 border-primary/20 backdrop-blur-sm hover:border-primary/50 transition-all">
+              <CardContent className="p-6">
+                <div className="flex items-center gap-2 mb-4">
+                  <div className="flex text-primary">
+                    <Icon name="Star" size={20} className="fill-current" />
+                    <Icon name="Star" size={20} className="fill-current" />
+                    <Icon name="Star" size={20} className="fill-current" />
+                    <Icon name="Star" size={20} className="fill-current" />
+                    <Icon name="Star" size={20} className="fill-current" />
+                  </div>
+                </div>
+                <p className="text-muted-foreground mb-4">
+                  "Лучшая копия Black Russia! Работает без лагов, все как в оригинале. Респект разработчикам!"
+                </p>
+                <div className="flex items-center gap-3">
+                  <div className="w-10 h-10 rounded-full bg-primary/20 flex items-center justify-center">
+                    <Icon name="User" size={20} className="text-primary" />
+                  </div>
+                  <div>
+                    <div className="font-semibold">Алексей М.</div>
+                    <div className="text-sm text-muted-foreground">Играет 3 месяца</div>
+                  </div>
+                </div>
+              </CardContent>
+            </Card>
+
+            <Card className="bg-dark/50 border-primary/20 backdrop-blur-sm hover:border-primary/50 transition-all">
+              <CardContent className="p-6">
+                <div className="flex items-center gap-2 mb-4">
+                  <div className="flex text-primary">
+                    <Icon name="Star" size={20} className="fill-current" />
+                    <Icon name="Star" size={20} className="fill-current" />
+                    <Icon name="Star" size={20} className="fill-current" />
+                    <Icon name="Star" size={20} className="fill-current" />
+                    <Icon name="Star" size={20} className="fill-current" />
+                  </div>
+                </div>
+                <p className="text-muted-foreground mb-4">
+                  "Наконец-то нормальная копия! Графика топ, игроков много, сервера стабильные. Всем советую!"
+                </p>
+                <div className="flex items-center gap-3">
+                  <div className="w-10 h-10 rounded-full bg-primary/20 flex items-center justify-center">
+                    <Icon name="User" size={20} className="text-primary" />
+                  </div>
+                  <div>
+                    <div className="font-semibold">Дмитрий К.</div>
+                    <div className="text-sm text-muted-foreground">Играет 5 месяцев</div>
+                  </div>
+                </div>
+              </CardContent>
+            </Card>
+
+            <Card className="bg-dark/50 border-primary/20 backdrop-blur-sm hover:border-primary/50 transition-all">
+              <CardContent className="p-6">
+                <div className="flex items-center gap-2 mb-4">
+                  <div className="flex text-primary">
+                    <Icon name="Star" size={20} className="fill-current" />
+                    <Icon name="Star" size={20} className="fill-current" />
+                    <Icon name="Star" size={20} className="fill-current" />
+                    <Icon name="Star" size={20} className="fill-current" />
+                    <Icon name="Star" size={20} className="fill-current" />
+                  </div>
+                </div>
+                <p className="text-muted-foreground mb-4">
+                  "Играю с кентами каждый день. Flex Russia вообще огонь, даже лучше оригинала стала!"
+                </p>
+                <div className="flex items-center gap-3">
+                  <div className="w-10 h-10 rounded-full bg-primary/20 flex items-center justify-center">
+                    <Icon name="User" size={20} className="text-primary" />
+                  </div>
+                  <div>
+                    <div className="font-semibold">Максим В.</div>
+                    <div className="text-sm text-muted-foreground">Играет 2 месяца</div>
+                  </div>
+                </div>
+              </CardContent>
+            </Card>
+          </div>
+        </div>
+      </section>
+
       {/* System Requirements */}
       <section className="py-20 px-4">
         <div className="max-w-5xl mx-auto">
