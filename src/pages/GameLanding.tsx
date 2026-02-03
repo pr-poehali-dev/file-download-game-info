@@ -31,7 +31,7 @@ const GameLanding = () => {
             FLEX RUSSIA
           </h1>
           <p className="text-xl md:text-2xl text-muted-foreground mb-12 max-w-2xl mx-auto">
-            Погрузитесь в захватывающий мир приключений, где каждое решение имеет значение
+            Самая лучшая копия Black Russia — открытый мир криминальной России
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
             <Button size="lg" onClick={handleDownload} className="text-lg px-8 py-6 bg-primary hover:bg-primary/90 hover-scale group">
@@ -75,28 +75,28 @@ const GameLanding = () => {
       {/* About Section */}
       <section className="py-20 px-4 bg-dark/30">
         <div className="max-w-4xl mx-auto">
-          <h2 className="text-4xl md:text-5xl font-bold text-center mb-12">О игре</h2>
+          <h2 className="text-4xl md:text-5xl font-bold text-center mb-12">Flex Russia — самая лучшая копия Black Russia</h2>
           <div className="space-y-6 text-lg text-muted-foreground leading-relaxed">
             <p>
-              Добро пожаловать в мир, где каждое действие имеет последствия. Эта игра сочетает в себе 
-              захватывающий геймплей, глубокую историю и невероятную атмосферу.
+              Flex Russia — это самая качественная и проработанная копия легендарной Black Russia. 
+              Погрузитесь в открытый мир криминальной России с улучшенной графикой, оптимизацией и новыми возможностями.
             </p>
             <p>
-              Исследуйте обширные локации, сражайтесь с врагами, решайте головоломки и раскрывайте 
-              тайны загадочного мира. Каждый выбор влияет на развитие сюжета и судьбу героев.
+              Стройте криминальную империю, участвуйте в разборках, зарабатывайте деньги честным и нечестным путём. 
+              Вся атмосфера оригинала, но с улучшениями и стабильной работой на всех устройствах.
             </p>
             <div className="grid md:grid-cols-3 gap-6 pt-8">
               <div className="text-center">
-                <div className="text-4xl font-bold text-primary mb-2">20+</div>
-                <div className="text-sm text-muted-foreground">Часов геймплея</div>
+                <div className="text-4xl font-bold text-primary mb-2">100%</div>
+                <div className="text-sm text-muted-foreground">Копия оригинала</div>
               </div>
               <div className="text-center">
-                <div className="text-4xl font-bold text-primary mb-2">50+</div>
-                <div className="text-sm text-muted-foreground">Уникальных локаций</div>
+                <div className="text-4xl font-bold text-primary mb-2">Онлайн</div>
+                <div className="text-sm text-muted-foreground">Мультиплеер</div>
               </div>
               <div className="text-center">
-                <div className="text-4xl font-bold text-primary mb-2">100+</div>
-                <div className="text-sm text-muted-foreground">Достижений</div>
+                <div className="text-4xl font-bold text-primary mb-2">Бесплатно</div>
+                <div className="text-sm text-muted-foreground">Полностью free</div>
               </div>
             </div>
           </div>
