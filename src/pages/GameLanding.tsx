@@ -71,7 +71,7 @@ const GameLanding = () => {
               <Button 
                 variant="outline" 
                 size="sm"
-                onClick={handleDownload}
+                onClick={() => window.open('https://t.me/flexrasia', '_blank')}
                 className="border-primary/20 hover:border-primary/50 hover-scale"
               >
                 <Icon name="Smartphone" className="mr-2" size={18} />
@@ -80,7 +80,7 @@ const GameLanding = () => {
               <Button 
                 variant="outline" 
                 size="sm"
-                onClick={handleDownload}
+                onClick={() => window.open('https://t.me/flexrasia', '_blank')}
                 className="border-primary/20 hover:border-primary/50 hover-scale"
               >
                 <Icon name="Apple" className="mr-2" size={18} />
@@ -89,7 +89,7 @@ const GameLanding = () => {
               <Button 
                 variant="outline" 
                 size="sm"
-                onClick={handleDownload}
+                onClick={() => window.open('https://t.me/flexrasia', '_blank')}
                 className="border-primary/20 hover:border-primary/50 hover-scale"
               >
                 <Icon name="Monitor" className="mr-2" size={18} />
@@ -533,7 +533,7 @@ const GameLanding = () => {
               Скачать сейчас
             </Button>
             <div className="flex flex-wrap gap-4 justify-center">
-              <Card className="bg-dark/50 border-primary/20 hover:border-primary/50 transition-all cursor-pointer hover-scale" onClick={handleDownload}>
+              <Card className="bg-dark/50 border-primary/20 hover:border-primary/50 transition-all cursor-pointer hover-scale" onClick={() => window.open('https://t.me/flexrasia', '_blank')}>
                 <CardContent className="p-6 flex items-center gap-4">
                   <div className="p-3 bg-primary/10 rounded-lg">
                     <Icon name="Smartphone" size={32} className="text-primary" />
@@ -545,7 +545,7 @@ const GameLanding = () => {
                 </CardContent>
               </Card>
 
-              <Card className="bg-dark/50 border-primary/20 hover:border-primary/50 transition-all cursor-pointer hover-scale" onClick={handleDownload}>
+              <Card className="bg-dark/50 border-primary/20 hover:border-primary/50 transition-all cursor-pointer hover-scale" onClick={() => window.open('https://t.me/flexrasia', '_blank')}>
                 <CardContent className="p-6 flex items-center gap-4">
                   <div className="p-3 bg-primary/10 rounded-lg">
                     <Icon name="Apple" size={32} className="text-primary" />
@@ -557,7 +557,7 @@ const GameLanding = () => {
                 </CardContent>
               </Card>
 
-              <Card className="bg-dark/50 border-primary/20 hover:border-primary/50 transition-all cursor-pointer hover-scale" onClick={handleDownload}>
+              <Card className="bg-dark/50 border-primary/20 hover:border-primary/50 transition-all cursor-pointer hover-scale" onClick={() => window.open('https://t.me/flexrasia', '_blank')}>
                 <CardContent className="p-6 flex items-center gap-4">
                   <div className="p-3 bg-primary/10 rounded-lg">
                     <Icon name="Monitor" size={32} className="text-primary" />
