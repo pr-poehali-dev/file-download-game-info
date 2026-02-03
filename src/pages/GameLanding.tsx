@@ -1,7 +1,7 @@
 import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
 import Icon from '@/components/ui/icon';
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useRef } from 'react';
 
 const GameLanding = () => {
   const [showTrailer, setShowTrailer] = useState(false);
@@ -15,6 +15,25 @@ const GameLanding = () => {
       });
     }, 3000);
     return () => clearInterval(interval);
+  }, []);
+  
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('visible');
+          }
+        });
+      },
+      { threshold: 0.1 }
+    );
+
+    document.querySelectorAll('.scroll-fade-in').forEach((el) => {
+      observer.observe(el);
+    });
+
+    return () => observer.disconnect();
   }, []);
   
   const features = [
@@ -103,10 +122,10 @@ const GameLanding = () => {
       {/* Features Section */}
       <section className="py-20 px-4">
         <div className="max-w-6xl mx-auto">
-          <h2 className="text-4xl md:text-5xl font-bold text-center mb-16 animate-fade-in">
+          <h2 className="text-4xl md:text-5xl font-bold text-center mb-16 scroll-fade-in">
             Особенности игры
           </h2>
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 scroll-fade-in">
             {features.map((feature, index) => (
               <Card 
                 key={index} 
@@ -129,8 +148,8 @@ const GameLanding = () => {
       {/* Screenshots Gallery */}
       <section className="py-20 px-4">
         <div className="max-w-6xl mx-auto">
-          <h2 className="text-4xl md:text-5xl font-bold text-center mb-16">Скриншоты из игры</h2>
-          <div className="grid md:grid-cols-2 gap-6">
+          <h2 className="text-4xl md:text-5xl font-bold text-center mb-16 scroll-fade-in">Скриншоты из игры</h2>
+          <div className="grid md:grid-cols-2 gap-6 scroll-fade-in">
             <div className="relative overflow-hidden rounded-lg border border-primary/20 hover:border-primary/50 transition-all hover-scale group">
               <img 
                 src="https://cdn.poehali.dev/projects/795fdb1f-a65e-4fef-8c83-184b6e9cc794/files/fce18f61-218c-4670-9ce6-7d3cca36293f.jpg" 
@@ -189,7 +208,7 @@ const GameLanding = () => {
 
       {/* About Section */}
       <section className="py-20 px-4 bg-dark/30">
-        <div className="max-w-4xl mx-auto">
+        <div className="max-w-4xl mx-auto scroll-fade-in">
           <h2 className="text-4xl md:text-5xl font-bold text-center mb-12">Flex Russia — самая лучшая копия Black Russia</h2>
           <div className="space-y-6 text-lg text-muted-foreground leading-relaxed">
             <p>
@@ -221,8 +240,8 @@ const GameLanding = () => {
       {/* News Section */}
       <section className="py-20 px-4">
         <div className="max-w-6xl mx-auto">
-          <h2 className="text-4xl md:text-5xl font-bold text-center mb-16">Новости и обновления</h2>
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+          <h2 className="text-4xl md:text-5xl font-bold text-center mb-16 scroll-fade-in">Новости и обновления</h2>
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 scroll-fade-in">
             <Card className="bg-dark/50 border-primary/20 backdrop-blur-sm hover:border-primary/50 transition-all hover-scale">
               <CardContent className="p-6">
                 <div className="flex items-center gap-2 mb-4 text-sm text-primary">
@@ -277,8 +296,8 @@ const GameLanding = () => {
       {/* Reviews Section */}
       <section className="py-20 px-4 bg-dark/30">
         <div className="max-w-6xl mx-auto">
-          <h2 className="text-4xl md:text-5xl font-bold text-center mb-16">Отзывы игроков</h2>
-          <div className="grid md:grid-cols-3 gap-6">
+          <h2 className="text-4xl md:text-5xl font-bold text-center mb-16 scroll-fade-in">Отзывы игроков</h2>
+          <div className="grid md:grid-cols-3 gap-6 scroll-fade-in">
             <Card className="bg-dark/50 border-primary/20 backdrop-blur-sm hover:border-primary/50 transition-all">
               <CardContent className="p-6">
                 <div className="flex items-center gap-2 mb-4">
@@ -363,8 +382,8 @@ const GameLanding = () => {
       {/* System Requirements */}
       <section className="py-20 px-4">
         <div className="max-w-5xl mx-auto">
-          <h2 className="text-4xl md:text-5xl font-bold text-center mb-16">Системные требования</h2>
-          <div className="grid md:grid-cols-2 gap-8">
+          <h2 className="text-4xl md:text-5xl font-bold text-center mb-16 scroll-fade-in">Системные требования</h2>
+          <div className="grid md:grid-cols-2 gap-8 scroll-fade-in">
             {/* Minimum */}
             <Card className="bg-dark/50 border-primary/20 backdrop-blur-sm">
               <CardContent className="p-8">
@@ -435,8 +454,8 @@ const GameLanding = () => {
       {/* FAQ Section */}
       <section className="py-20 px-4">
         <div className="max-w-4xl mx-auto">
-          <h2 className="text-4xl md:text-5xl font-bold text-center mb-16">Частые вопросы</h2>
-          <div className="space-y-4">
+          <h2 className="text-4xl md:text-5xl font-bold text-center mb-16 scroll-fade-in">Частые вопросы</h2>
+          <div className="space-y-4 scroll-fade-in">
             <Card className="bg-dark/50 border-primary/20 backdrop-blur-sm">
               <CardContent className="p-6">
                 <div className="flex items-start gap-4">
@@ -522,7 +541,7 @@ const GameLanding = () => {
 
       {/* CTA Section */}
       <section className="py-20 px-4 bg-gradient-to-t from-primary/10 to-transparent">
-        <div className="max-w-4xl mx-auto text-center">
+        <div className="max-w-4xl mx-auto text-center scroll-fade-in">
           <h2 className="text-4xl md:text-5xl font-bold mb-6">Готовы начать приключение?</h2>
           <p className="text-xl text-muted-foreground mb-8">
             Скачайте игру прямо сейчас и окунитесь в захватывающий мир
