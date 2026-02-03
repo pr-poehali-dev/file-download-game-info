@@ -7,6 +7,7 @@ const GameLanding = () => {
   const [showTrailer, setShowTrailer] = useState(false);
   const [onlinePlayers, setOnlinePlayers] = useState(1247);
   const [scrollY, setScrollY] = useState(0);
+  const [showScrollTop, setShowScrollTop] = useState(false);
   
   useEffect(() => {
     const interval = setInterval(() => {
@@ -40,11 +41,16 @@ const GameLanding = () => {
   useEffect(() => {
     const handleScroll = () => {
       setScrollY(window.scrollY);
+      setShowScrollTop(window.scrollY > 500);
     };
     
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
+  
+  const scrollToTop = () => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  };
   
   const features = [
     { icon: 'Gamepad2', title: 'Динамичный геймплей', description: 'Погрузитесь в захватывающее действие' },
@@ -640,6 +646,17 @@ const GameLanding = () => {
             />
           </div>
         </div>
+      )}
+
+      {/* Scroll to Top Button */}
+      {showScrollTop && (
+        <button
+          onClick={scrollToTop}
+          className="fixed bottom-8 right-8 z-40 p-4 bg-primary hover:bg-primary/90 rounded-full shadow-lg transition-all hover-scale animate-fade-in"
+          aria-label="Наверх"
+        >
+          <Icon name="ArrowUp" size={24} />
+        </button>
       )}
     </div>
   );
