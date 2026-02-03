@@ -1,8 +1,11 @@
 import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
 import Icon from '@/components/ui/icon';
+import { useState } from 'react';
 
 const GameLanding = () => {
+  const [showTrailer, setShowTrailer] = useState(false);
+  
   const features = [
     { icon: 'Gamepad2', title: 'Динамичный геймплей', description: 'Погрузитесь в захватывающее действие' },
     { icon: 'Users', title: 'Мультиплеер', description: 'Играйте с друзьями онлайн' },
@@ -38,7 +41,12 @@ const GameLanding = () => {
               <Icon name="Download" className="mr-2 group-hover:animate-bounce" size={24} />
               Скачать игру
             </Button>
-            <Button size="lg" variant="outline" className="text-lg px-8 py-6 border-primary/30 hover:border-primary hover-scale">
+            <Button 
+              size="lg" 
+              variant="outline" 
+              className="text-lg px-8 py-6 border-primary/30 hover:border-primary hover-scale"
+              onClick={() => setShowTrailer(true)}
+            >
               <Icon name="Play" className="mr-2" size={24} />
               Трейлер
             </Button>
@@ -195,6 +203,30 @@ const GameLanding = () => {
           <p>© 2024 Flex Russia. Все права защищены.</p>
         </div>
       </footer>
+
+      {/* Video Modal */}
+      {showTrailer && (
+        <div 
+          className="fixed inset-0 bg-black/90 z-50 flex items-center justify-center p-4 animate-fade-in"
+          onClick={() => setShowTrailer(false)}
+        >
+          <div className="relative w-full max-w-5xl aspect-video" onClick={(e) => e.stopPropagation()}>
+            <button 
+              onClick={() => setShowTrailer(false)}
+              className="absolute -top-12 right-0 text-white hover:text-primary transition-colors"
+            >
+              <Icon name="X" size={32} />
+            </button>
+            <iframe
+              className="w-full h-full rounded-lg"
+              src="https://www.youtube.com/embed/dQw4w9WgXcQ?autoplay=1"
+              title="Black Russia Trailer"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowFullScreen
+            />
+          </div>
+        </div>
+      )}
     </div>
   );
 };
