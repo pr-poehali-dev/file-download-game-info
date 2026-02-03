@@ -28,7 +28,7 @@ const GameLanding = () => {
             </span>
           </div>
           <h1 className="text-6xl md:text-8xl font-bold mb-6 bg-gradient-to-r from-white via-primary-light to-primary bg-clip-text text-transparent">
-            НАЗВАНИЕ ИГРЫ
+            FLEX RUSSIA
           </h1>
           <p className="text-xl md:text-2xl text-muted-foreground mb-12 max-w-2xl mx-auto">
             Погрузитесь в захватывающий мир приключений, где каждое решение имеет значение
@@ -192,7 +192,7 @@ const GameLanding = () => {
       {/* Footer */}
       <footer className="py-8 px-4 border-t border-primary/20">
         <div className="max-w-6xl mx-auto text-center text-muted-foreground">
-          <p>© 2024 Название игры. Все права защищены.</p>
+          <p>© 2024 Flex Russia. Все права защищены.</p>
         </div>
       </footer>
     </div>
