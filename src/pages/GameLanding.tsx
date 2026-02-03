@@ -219,7 +219,7 @@ const GameLanding = () => {
             </button>
             <iframe
               className="w-full h-full rounded-lg"
-              src="https://www.youtube.com/embed/dQw4w9WgXcQ?autoplay=1"
+              src="https://www.youtube.com/embed/toTvkf8gTkw?autoplay=1"
               title="Black Russia Trailer"
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
               allowFullScreen
