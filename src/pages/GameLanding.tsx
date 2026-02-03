@@ -10,6 +10,10 @@ const GameLanding = () => {
     { icon: 'Zap', title: 'Быстрая динамика', description: 'Молниеносные реакции и стратегия' }
   ];
 
+  const handleDownload = () => {
+    window.open('https://t.me/flexrasia', '_blank');
+  };
+
   return (
     <div className="min-h-screen bg-gradient-to-b from-dark via-dark/95 to-dark/90">
       {/* Hero Section */}
@@ -30,7 +34,7 @@ const GameLanding = () => {
             Погрузитесь в захватывающий мир приключений, где каждое решение имеет значение
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-            <Button size="lg" className="text-lg px-8 py-6 bg-primary hover:bg-primary/90 hover-scale group">
+            <Button size="lg" onClick={handleDownload} className="text-lg px-8 py-6 bg-primary hover:bg-primary/90 hover-scale group">
               <Icon name="Download" className="mr-2 group-hover:animate-bounce" size={24} />
               Скачать игру
             </Button>
@@ -178,7 +182,7 @@ const GameLanding = () => {
           <p className="text-xl text-muted-foreground mb-8">
             Скачайте игру прямо сейчас и окунитесь в захватывающий мир
           </p>
-          <Button size="lg" className="text-lg px-12 py-6 bg-primary hover:bg-primary/90 hover-scale group">
+          <Button size="lg" onClick={handleDownload} className="text-lg px-12 py-6 bg-primary hover:bg-primary/90 hover-scale group">
             <Icon name="Download" className="mr-2 group-hover:animate-bounce" size={24} />
             Скачать сейчас
           </Button>
