@@ -401,6 +401,94 @@ const GameLanding = () => {
         </div>
       </section>
 
+      {/* FAQ Section */}
+      <section className="py-20 px-4">
+        <div className="max-w-4xl mx-auto">
+          <h2 className="text-4xl md:text-5xl font-bold text-center mb-16">Частые вопросы</h2>
+          <div className="space-y-4">
+            <Card className="bg-dark/50 border-primary/20 backdrop-blur-sm">
+              <CardContent className="p-6">
+                <div className="flex items-start gap-4">
+                  <div className="p-2 bg-primary/10 rounded-lg">
+                    <Icon name="HelpCircle" size={24} className="text-primary" />
+                  </div>
+                  <div className="flex-1">
+                    <h3 className="text-lg font-bold mb-2">Flex Russia — это бесплатная игра?</h3>
+                    <p className="text-muted-foreground">
+                      Да, Flex Russia полностью бесплатна! Вы можете скачать и играть без каких-либо платежей.
+                    </p>
+                  </div>
+                </div>
+              </CardContent>
+            </Card>
+
+            <Card className="bg-dark/50 border-primary/20 backdrop-blur-sm">
+              <CardContent className="p-6">
+                <div className="flex items-start gap-4">
+                  <div className="p-2 bg-primary/10 rounded-lg">
+                    <Icon name="HelpCircle" size={24} className="text-primary" />
+                  </div>
+                  <div className="flex-1">
+                    <h3 className="text-lg font-bold mb-2">Чем Flex Russia отличается от Black Russia?</h3>
+                    <p className="text-muted-foreground">
+                      Flex Russia — это улучшенная копия с лучшей оптимизацией, стабильными серверами и регулярными обновлениями. Все возможности оригинала + новые фичи.
+                    </p>
+                  </div>
+                </div>
+              </CardContent>
+            </Card>
+
+            <Card className="bg-dark/50 border-primary/20 backdrop-blur-sm">
+              <CardContent className="p-6">
+                <div className="flex items-start gap-4">
+                  <div className="p-2 bg-primary/10 rounded-lg">
+                    <Icon name="HelpCircle" size={24} className="text-primary" />
+                  </div>
+                  <div className="flex-1">
+                    <h3 className="text-lg font-bold mb-2">На каких устройствах работает игра?</h3>
+                    <p className="text-muted-foreground">
+                      Игра работает на Android 5.0 и выше, iOS 12+, а также на ПК с Windows 10/11. Оптимизирована даже для слабых устройств.
+                    </p>
+                  </div>
+                </div>
+              </CardContent>
+            </Card>
+
+            <Card className="bg-dark/50 border-primary/20 backdrop-blur-sm">
+              <CardContent className="p-6">
+                <div className="flex items-start gap-4">
+                  <div className="p-2 bg-primary/10 rounded-lg">
+                    <Icon name="HelpCircle" size={24} className="text-primary" />
+                  </div>
+                  <div className="flex-1">
+                    <h3 className="text-lg font-bold mb-2">Есть ли мультиплеер?</h3>
+                    <p className="text-muted-foreground">
+                      Да! В Flex Russia можно играть онлайн с друзьями и тысячами других игроков. Создавайте банды, участвуйте в разборках и стройте криминальную империю вместе.
+                    </p>
+                  </div>
+                </div>
+              </CardContent>
+            </Card>
+
+            <Card className="bg-dark/50 border-primary/20 backdrop-blur-sm">
+              <CardContent className="p-6">
+                <div className="flex items-start gap-4">
+                  <div className="p-2 bg-primary/10 rounded-lg">
+                    <Icon name="HelpCircle" size={24} className="text-primary" />
+                  </div>
+                  <div className="flex-1">
+                    <h3 className="text-lg font-bold mb-2">Как получить поддержку?</h3>
+                    <p className="text-muted-foreground">
+                      Присоединяйтесь к нашему Telegram-каналу @flexrasia — там вы найдете помощь, новости, обновления и сможете пообщаться с другими игроками!
+                    </p>
+                  </div>
+                </div>
+              </CardContent>
+            </Card>
+          </div>
+        </div>
+      </section>
+
       {/* CTA Section */}
       <section className="py-20 px-4 bg-gradient-to-t from-primary/10 to-transparent">
         <div className="max-w-4xl mx-auto text-center">
