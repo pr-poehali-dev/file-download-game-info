@@ -51,20 +51,51 @@ const GameLanding = () => {
           <p className="text-xl md:text-2xl text-muted-foreground mb-12 max-w-2xl mx-auto">
             Самая лучшая копия Black Russia — открытый мир криминальной России
           </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-            <Button size="lg" onClick={handleDownload} className="text-lg px-8 py-6 bg-primary hover:bg-primary/90 hover-scale group">
-              <Icon name="Download" className="mr-2 group-hover:animate-bounce" size={24} />
-              Скачать игру
-            </Button>
-            <Button 
-              size="lg" 
-              variant="outline" 
-              className="text-lg px-8 py-6 border-primary/30 hover:border-primary hover-scale"
-              onClick={() => setShowTrailer(true)}
-            >
-              <Icon name="Play" className="mr-2" size={24} />
-              Трейлер
-            </Button>
+          <div className="flex flex-col gap-6 justify-center items-center">
+            <div className="flex flex-col sm:flex-row gap-4">
+              <Button size="lg" onClick={handleDownload} className="text-lg px-8 py-6 bg-primary hover:bg-primary/90 hover-scale group">
+                <Icon name="Download" className="mr-2 group-hover:animate-bounce" size={24} />
+                Скачать игру
+              </Button>
+              <Button 
+                size="lg" 
+                variant="outline" 
+                className="text-lg px-8 py-6 border-primary/30 hover:border-primary hover-scale"
+                onClick={() => setShowTrailer(true)}
+              >
+                <Icon name="Play" className="mr-2" size={24} />
+                Трейлер
+              </Button>
+            </div>
+            <div className="flex flex-wrap gap-3 justify-center">
+              <Button 
+                variant="outline" 
+                size="sm"
+                onClick={handleDownload}
+                className="border-primary/20 hover:border-primary/50 hover-scale"
+              >
+                <Icon name="Smartphone" className="mr-2" size={18} />
+                Android
+              </Button>
+              <Button 
+                variant="outline" 
+                size="sm"
+                onClick={handleDownload}
+                className="border-primary/20 hover:border-primary/50 hover-scale"
+              >
+                <Icon name="Apple" className="mr-2" size={18} />
+                iOS
+              </Button>
+              <Button 
+                variant="outline" 
+                size="sm"
+                onClick={handleDownload}
+                className="border-primary/20 hover:border-primary/50 hover-scale"
+              >
+                <Icon name="Monitor" className="mr-2" size={18} />
+                Windows
+              </Button>
+            </div>
           </div>
         </div>
       </section>
@@ -496,10 +527,49 @@ const GameLanding = () => {
           <p className="text-xl text-muted-foreground mb-8">
             Скачайте игру прямо сейчас и окунитесь в захватывающий мир
           </p>
-          <Button size="lg" onClick={handleDownload} className="text-lg px-12 py-6 bg-primary hover:bg-primary/90 hover-scale group">
-            <Icon name="Download" className="mr-2 group-hover:animate-bounce" size={24} />
-            Скачать сейчас
-          </Button>
+          <div className="flex flex-col gap-6 items-center">
+            <Button size="lg" onClick={handleDownload} className="text-lg px-12 py-6 bg-primary hover:bg-primary/90 hover-scale group">
+              <Icon name="Download" className="mr-2 group-hover:animate-bounce" size={24} />
+              Скачать сейчас
+            </Button>
+            <div className="flex flex-wrap gap-4 justify-center">
+              <Card className="bg-dark/50 border-primary/20 hover:border-primary/50 transition-all cursor-pointer hover-scale" onClick={handleDownload}>
+                <CardContent className="p-6 flex items-center gap-4">
+                  <div className="p-3 bg-primary/10 rounded-lg">
+                    <Icon name="Smartphone" size={32} className="text-primary" />
+                  </div>
+                  <div className="text-left">
+                    <div className="text-xs text-muted-foreground">Доступно на</div>
+                    <div className="text-lg font-bold">Android</div>
+                  </div>
+                </CardContent>
+              </Card>
+
+              <Card className="bg-dark/50 border-primary/20 hover:border-primary/50 transition-all cursor-pointer hover-scale" onClick={handleDownload}>
+                <CardContent className="p-6 flex items-center gap-4">
+                  <div className="p-3 bg-primary/10 rounded-lg">
+                    <Icon name="Apple" size={32} className="text-primary" />
+                  </div>
+                  <div className="text-left">
+                    <div className="text-xs text-muted-foreground">Загрузить из</div>
+                    <div className="text-lg font-bold">App Store</div>
+                  </div>
+                </CardContent>
+              </Card>
+
+              <Card className="bg-dark/50 border-primary/20 hover:border-primary/50 transition-all cursor-pointer hover-scale" onClick={handleDownload}>
+                <CardContent className="p-6 flex items-center gap-4">
+                  <div className="p-3 bg-primary/10 rounded-lg">
+                    <Icon name="Monitor" size={32} className="text-primary" />
+                  </div>
+                  <div className="text-left">
+                    <div className="text-xs text-muted-foreground">Скачать для</div>
+                    <div className="text-lg font-bold">Windows PC</div>
+                  </div>
+                </CardContent>
+              </Card>
+            </div>
+          </div>
         </div>
       </section>
 
