@@ -80,6 +80,67 @@ const GameLanding = () => {
         </div>
       </section>
 
+      {/* Screenshots Gallery */}
+      <section className="py-20 px-4">
+        <div className="max-w-6xl mx-auto">
+          <h2 className="text-4xl md:text-5xl font-bold text-center mb-16">Скриншоты из игры</h2>
+          <div className="grid md:grid-cols-2 gap-6">
+            <div className="relative overflow-hidden rounded-lg border border-primary/20 hover:border-primary/50 transition-all hover-scale group">
+              <img 
+                src="https://cdn.poehali.dev/projects/795fdb1f-a65e-4fef-8c83-184b6e9cc794/files/fce18f61-218c-4670-9ce6-7d3cca36293f.jpg" 
+                alt="Открытый мир города"
+                className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-dark/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity">
+                <div className="absolute bottom-4 left-4 text-white">
+                  <h3 className="text-xl font-bold">Открытый мир</h3>
+                  <p className="text-sm text-muted-foreground">Исследуй город</p>
+                </div>
+              </div>
+            </div>
+            <div className="relative overflow-hidden rounded-lg border border-primary/20 hover:border-primary/50 transition-all hover-scale group">
+              <img 
+                src="https://cdn.poehali.dev/projects/795fdb1f-a65e-4fef-8c83-184b6e9cc794/files/af349545-0a5f-4eea-a6b3-3d66ee17a87f.jpg" 
+                alt="Кастомизация персонажа"
+                className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-dark/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity">
+                <div className="absolute bottom-4 left-4 text-white">
+                  <h3 className="text-xl font-bold">Кастомизация</h3>
+                  <p className="text-sm text-muted-foreground">Создай своего персонажа</p>
+                </div>
+              </div>
+            </div>
+            <div className="relative overflow-hidden rounded-lg border border-primary/20 hover:border-primary/50 transition-all hover-scale group">
+              <img 
+                src="https://cdn.poehali.dev/projects/795fdb1f-a65e-4fef-8c83-184b6e9cc794/files/6e6d3db6-934f-40fc-b335-7fa9ebcb267d.jpg" 
+                alt="Вождение автомобилей"
+                className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-dark/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity">
+                <div className="absolute bottom-4 left-4 text-white">
+                  <h3 className="text-xl font-bold">Вождение</h3>
+                  <p className="text-sm text-muted-foreground">Гоняй на тачках</p>
+                </div>
+              </div>
+            </div>
+            <div className="relative overflow-hidden rounded-lg border border-primary/20 hover:border-primary/50 transition-all hover-scale group">
+              <img 
+                src="https://cdn.poehali.dev/projects/795fdb1f-a65e-4fef-8c83-184b6e9cc794/files/1808c164-5e5f-4ac5-ac66-79eaad6990b2.jpg" 
+                alt="Мультиплеер"
+                className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-dark/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity">
+                <div className="absolute bottom-4 left-4 text-white">
+                  <h3 className="text-xl font-bold">Онлайн</h3>
+                  <p className="text-sm text-muted-foreground">Играй с друзьями</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* About Section */}
       <section className="py-20 px-4 bg-dark/30">
         <div className="max-w-4xl mx-auto">
