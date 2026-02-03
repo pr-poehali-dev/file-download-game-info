@@ -187,6 +187,62 @@ const GameLanding = () => {
         </div>
       </section>
 
+      {/* News Section */}
+      <section className="py-20 px-4">
+        <div className="max-w-6xl mx-auto">
+          <h2 className="text-4xl md:text-5xl font-bold text-center mb-16">Новости и обновления</h2>
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+            <Card className="bg-dark/50 border-primary/20 backdrop-blur-sm hover:border-primary/50 transition-all hover-scale">
+              <CardContent className="p-6">
+                <div className="flex items-center gap-2 mb-4 text-sm text-primary">
+                  <Icon name="Calendar" size={16} />
+                  <span>3 дня назад</span>
+                </div>
+                <h3 className="text-xl font-bold mb-3">Обновление 2.5: Новые машины</h3>
+                <p className="text-muted-foreground mb-4">
+                  В игру добавлено 15 новых автомобилей премиум-класса. Улучшена физика вождения и добавлены новые тюнинг-опции.
+                </p>
+                <div className="inline-flex items-center gap-2 text-primary text-sm font-medium">
+                  Подробнее <Icon name="ArrowRight" size={16} />
+                </div>
+              </CardContent>
+            </Card>
+
+            <Card className="bg-dark/50 border-primary/20 backdrop-blur-sm hover:border-primary/50 transition-all hover-scale">
+              <CardContent className="p-6">
+                <div className="flex items-center gap-2 mb-4 text-sm text-primary">
+                  <Icon name="Calendar" size={16} />
+                  <span>1 неделя назад</span>
+                </div>
+                <h3 className="text-xl font-bold mb-3">Новый сезон: Криминальные войны</h3>
+                <p className="text-muted-foreground mb-4">
+                  Стартовал новый сезон с уникальными наградами, новыми миссиями и эксклюзивными скинами для оружия.
+                </p>
+                <div className="inline-flex items-center gap-2 text-primary text-sm font-medium">
+                  Подробнее <Icon name="ArrowRight" size={16} />
+                </div>
+              </CardContent>
+            </Card>
+
+            <Card className="bg-dark/50 border-primary/20 backdrop-blur-sm hover:border-primary/50 transition-all hover-scale">
+              <CardContent className="p-6">
+                <div className="flex items-center gap-2 mb-4 text-sm text-primary">
+                  <Icon name="Calendar" size={16} />
+                  <span>2 недели назад</span>
+                </div>
+                <h3 className="text-xl font-bold mb-3">Оптимизация и исправления</h3>
+                <p className="text-muted-foreground mb-4">
+                  Улучшена производительность на слабых устройствах, исправлены критические баги, добавлена поддержка новых Android-версий.
+                </p>
+                <div className="inline-flex items-center gap-2 text-primary text-sm font-medium">
+                  Подробнее <Icon name="ArrowRight" size={16} />
+                </div>
+              </CardContent>
+            </Card>
+          </div>
+        </div>
+      </section>
+
       {/* Reviews Section */}
       <section className="py-20 px-4 bg-dark/30">
         <div className="max-w-6xl mx-auto">
